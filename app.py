@@ -26,19 +26,21 @@ def upload_document():
         
         if uploaded_file.filename == '':
             logging.error('No file selected', 'error')
-            return redirect(url_for('index'))
+            return render_template('index.html', error='No file selected')
 
         handle_document_upload(uploaded_file, chat_name)
         logging.info('Document indexed successfully', 'success')
+        return render_template('index.html', answer='Document indexed successfully!')
+
 
     except Exception as e:
         logging.error(f"Error during document upload: {str(e)}")
         raise CustomException(e, sys)
+    
 
-    return redirect(url_for('index'))
 
 
-@app.route('/query', methods=['POST'])
+@app.route('/query', methods=['POST'])  
 def query_document():
     try:
         chat_name = request.form.get('query_chat_name')
@@ -51,12 +53,9 @@ def query_document():
 
         answer = handle_document_query(chat_name, question)
         logging.info(f"Answer: {answer}", 'success')
-        # Check if the request is from Postman or a browser
         if request.accept_mimetypes['application/json'] >= request.accept_mimetypes['text/html']:
-            # Return JSON if the request expects a JSON response (e.g., Postman or API client)
             return jsonify(success=True, answer=answer)
         else:
-            # Render the response in HTML if accessed from a browser UI
             return render_template('index.html', answer=answer)
 
     except Exception as e:
