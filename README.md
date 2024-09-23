@@ -21,9 +21,10 @@ To get started with the project, follow these steps:
 Api Testing
 ------------
 
-document_upload: curl -X POST -F "chat_name=example" -F "file=@path/to/document.pdf" http://localhost:5000/upload
+document_upload: curl -X POST -F "chat_name=your_chat_name" -F "file=@path_to_your_file.pdf" http://localhost:5000/upload
 
-query: curl -X POST -d "query_chat_name=example&question=What is the main topic?" http://localhost:5000/query
+
+query: curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "query_chat_name=your_chat_name&question=your_question" http://localhost:5000/query
 
 
 

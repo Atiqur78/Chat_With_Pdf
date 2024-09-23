@@ -7,9 +7,6 @@ import sys
 
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
-
-
 
 
 @app.route('/')
@@ -49,12 +46,18 @@ def query_document():
 
         if not chat_name or not question:
             logging.info('Missing chat name or question', 'error')
-            return redirect(url_for('index'))
+            return render_template('index.html', error="Missing chat name or question") 
 
 
         answer = handle_document_query(chat_name, question)
         logging.info(f"Answer: {answer}", 'success')
-        return render_template('index.html', answer=answer)
+        # Check if the request is from Postman or a browser
+        if request.accept_mimetypes['application/json'] >= request.accept_mimetypes['text/html']:
+            # Return JSON if the request expects a JSON response (e.g., Postman or API client)
+            return jsonify(success=True, answer=answer)
+        else:
+            # Render the response in HTML if accessed from a browser UI
+            return render_template('index.html', answer=answer)
 
     except Exception as e:
         logging.error(f"Error during document query: {str(e)}")
