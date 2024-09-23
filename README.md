@@ -18,6 +18,14 @@ To get started with the project, follow these steps:
 3. Create .env file and write the required API_KEY
 4. Run the application: `python main.py`
 
+Api Testing
+------------
+
+document_upload: curl -X POST -F "chat_name=example" -F "file=@path/to/document.pdf" http://localhost:5000/upload
+
+query: curl -X POST -d "query_chat_name=example&question=What is the main topic?" http://localhost:5000/query
+
+
 
 ## Authors
 -----------
