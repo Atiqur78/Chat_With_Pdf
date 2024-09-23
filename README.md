@@ -10,16 +10,16 @@ This project aims to provide a innovative way of interacting with PDF files by a
 
 ## Prerequisites 
 --------------------
-1. Python 3.10 
-2. flask 
-3. PyPDF2 
-4. pinecone 
-5. firebase_admin 
-6. python-dotenv 
-7. google-generativeai 
-8. langchain 
-9. langchain-google-genai 
-10. profanity-check 
+1. `Python 3.10` 
+2. `flask` 
+3. `PyPDF2`
+4. `pinecone` 
+5. `firebase_admin`
+6. `python-dotenv`
+7. `google-generativeai` 
+8. `langchain`
+9. `langchain-google-genai` 
+10. `profanity-check` 
 
 ## Getting Started
 -------------------
