@@ -8,6 +8,19 @@ A project that enables users to chat with PDF files.
 
 This project aims to provide a innovative way of interacting with PDF files by allowing users to chat with them.
 
+## Prerequisites 
+--------------------
+1. Python 3.10 
+2. flask 
+3. PyPDF2 
+4. pinecone 
+5. firebase_admin 
+6. python-dotenv 
+7. google-generativeai 
+8. langchain 
+9. langchain-google-genai 
+10. profanity-check 
+
 ## Getting Started
 -------------------
 
@@ -18,18 +31,6 @@ To get started with the project, follow these steps:
 3. Create .env file and write the required PINCONE_API_KEY | FIREBASE_API_KEY
 4. Run the application: `python main.py`
 
-## Prerequisites 
---------------------
-• Python 3.10 
-• flask 
-• PyPDF2 
-• pinecone 
-• firebase_admin 
-• python-dotenv 
-• google-generativeai 
-• langchain 
-• langchain-google-genai 
-• profanity-check 
 
 ## Api Testing
 ------------
