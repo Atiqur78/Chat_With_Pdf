@@ -18,7 +18,20 @@ To get started with the project, follow these steps:
 3. Create .env file and write the required API_KEY
 4. Run the application: `python main.py`
 
-Api Testing
+## Prerequisites 
+--------------------
+• Python 3.10 
+• flask 
+• PyPDF2 
+• pinecone 
+• firebase_admin 
+• python-dotenv 
+• google-generativeai 
+• langchain 
+• langchain-google-genai 
+• profanity-check 
+
+## Api Testing
 ------------
 
 document_upload: `curl -X POST -F "chat_name=your_chat_name" -F "file=@path_to_your_file.pdf" http://localhost:5000/upload`
