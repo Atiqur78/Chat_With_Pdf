@@ -30,6 +30,7 @@ To get started with the project, follow these steps:
 2. Install the required dependencies: `pip install -r requirements.txt`
 3. Create .env file and write the required `PINCONE_API_KEY | FIREBASE_API_KEY`
 4. Run the application: `python main.py`
+5. Using UI interface upload the `.pdf` file and ask the `Query` related to pdf
 
 
 ## Api Testing
