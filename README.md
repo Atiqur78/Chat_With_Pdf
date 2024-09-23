@@ -27,7 +27,7 @@ document_upload: `curl -X POST -F "chat_name=your_chat_name" -F "file=@path_to_y
 query: `curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "query_chat_name=your_chat_name&question=your_question" http://localhost:5000/query`
 
 
-Video Link : `https://drive.google.com/file/d/1ktCYGWvk9gwHBMXv6f8MBh4VSP-3Kxuz/view?usp=sharing`
+Video Link : https://drive.google.com/file/d/1ktCYGWvk9gwHBMXv6f8MBh4VSP-3Kxuz/view?usp=sharing
 
 ## Authors
 -----------
