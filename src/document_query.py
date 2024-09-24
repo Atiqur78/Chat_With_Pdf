@@ -32,7 +32,7 @@ def handle_document_query(chat_name, question):
 
         # Query Pinecone
         search_result = index.query(
-            vector=vector_query, top_k=3, include_values=False, include_metadata=True
+            vector=vector_query, namespace=chat_name,top_k=3, include_values=False, include_metadata=True
         )
 
         docs = [

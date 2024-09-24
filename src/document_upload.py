@@ -48,7 +48,7 @@ def handle_document_upload(uploaded_file, chat_name):
         ]
 
         # Upsert vectors to Pinecone
-        index.upsert(vectors=upsert_data)
+        index.upsert(vectors=upsert_data,namespace=chat_name)
 
         # Store index metadata in Firestore
         db = firestore.client()
